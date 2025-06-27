@@ -14,7 +14,7 @@ require("oil").setup()
 --     "arduino:avr:uno",
 --   },
 -- })
---
+--#regio
 --- vim plug setup
 local vim = vim
 local Plug = vim.fn["plug#"]
@@ -40,6 +40,7 @@ require("telescope").load_extension("zoxide")
 require("platformio").setup({
   lsp = "ccls", --default: ccls, other option: clangd
   -- If you pick clangd, it also creates compile_commands.json
+  menu_key = "<leader>m",
 })
 
 require("lspconfig").clangd.setup({
