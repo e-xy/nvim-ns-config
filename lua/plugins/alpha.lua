@@ -504,6 +504,7 @@ return {
       dashboard.button("z", "  > Browse Directories", ":Telescope zoxide list<CR>"),
       dashboard.button("f", "󰈞  > Find file", ":Telescope find_files<CR>"),
       dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+      dashboard.button("c", "  > Edit Config", ":e ~/.config/nvim/<CR>"),
     }
 
     alpha.setup(dashboard.opts)
