@@ -17,6 +17,9 @@ return {
     providers = {
       openai = {
         model = "gpt-5",
+        extra_request_body = {
+          temperature = 1,
+        },
       },
     },
   },
