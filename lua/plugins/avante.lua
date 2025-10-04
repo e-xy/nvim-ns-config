@@ -15,8 +15,16 @@ return {
     -- for example
     provider = "openai",
     providers = {
-      openai = {
+      openai_heavy = {
+        __inherited_from = "openai",
         model = "gpt-5",
+        extra_request_body = {
+          temperature = 1,
+        },
+      },
+      openai_light = {
+        __inherited_from = "openai",
+        model = "gpt-5-mini",
         extra_request_body = {
           temperature = 1,
         },
