@@ -49,7 +49,7 @@ return {
     }
 
     local function footer()
-      return "Making 5 day tasks into 5-week tasks since 2018 ;)"
+      return "Making 5-day tasks into 5-week tasks since 2018 ;)"
     end
 
     dashboard.section.footer.val = footer()
