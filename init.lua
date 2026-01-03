@@ -56,4 +56,29 @@ if vim.g.neovide then
   vim.g.neovide_normal_opacity = 0.8
 end
 
+-- set the alpha colors here
+
+local function set_alpha_default_colors()
+  vim.api.nvim_set_hl(0, "AlphaHeader", {
+    fg = "#00e1ff",
+    bold = true,
+  })
+
+  vim.api.nvim_set_hl(0, "AlphaButtons", {
+    fg = "#ffffff",
+  })
+
+  vim.api.nvim_set_hl(0, "AlphaFooter", {
+    fg = "#00a5c9",
+    italic = true,
+    bold = true,
+  })
+end
+
+set_alpha_default_colors()
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = set_alpha_default_colors,
+})
+
 vim.opt.laststatus = 3
